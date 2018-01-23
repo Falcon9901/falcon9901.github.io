@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="PrerequisitesYou should have a local Django app setup using Postgres setup neatly in a virtualenv  Python development environment local Django application using PostgreSQL Heroku Account the Heroku CL">
+<meta name="keywords" content="Django,Tutorial,Heroku,Python Decouple">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Deploy Django Applications on Heroku using Python Decouple">
+<meta property="og:url" content="http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/index.html">
+<meta property="og:site_name" content="Shaaah.in">
+<meta property="og:description" content="PrerequisitesYou should have a local Django app setup using Postgres setup neatly in a virtualenv  Python development environment local Django application using PostgreSQL Heroku Account the Heroku CL">
+<meta property="og:updated_time" content="2018-01-23T17:36:06.344Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Deploy Django Applications on Heroku using Python Decouple">
+<meta name="twitter:description" content="PrerequisitesYou should have a local Django app setup using Postgres setup neatly in a virtualenv  Python development environment local Django application using PostgreSQL Heroku Account the Heroku CL">
+<meta name="twitter:creator" content="@shaahinhosseini">
+<meta property="fb:app_id" content="shahin.hosseini9901">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>How to Deploy Django Applications on Heroku using Python Decouple</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/falcon9901">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/How to Setup Digitalocean Spaces for Django using Python Decouple/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/How to Use Python Decouple in Django/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&text=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&title=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&is_video=false&description=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=How to Deploy Django Applications on Heroku using Python Decouple&body=Check out this article: http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&title=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&title=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&title=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&title=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&name=How to Deploy Django Applications on Heroku using Python Decouple&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-number">1.</span> <span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-dj-database-url"><span class="toc-number">2.</span> <span class="toc-text">Install dj-database-url</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-psycopg2"><span class="toc-number">3.</span> <span class="toc-text">Install psycopg2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Python-Decouple"><span class="toc-number">4.</span> <span class="toc-text">Install Python Decouple</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Preparing-the-Application"><span class="toc-number">5.</span> <span class="toc-text">Preparing the Application</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Procfile"><span class="toc-number">6.</span> <span class="toc-text">The Procfile</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-file-named-Procfile-in-the-project"><span class="toc-number">6.1.</span> <span class="toc-text">Create a file named Procfile in the project</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Update-requirements"><span class="toc-number">7.</span> <span class="toc-text">Update requirements</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#add-Gunicorn-to-requirements-txt"><span class="toc-number">7.1.</span> <span class="toc-text">add Gunicorn to requirements.txt</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-runtime-txt"><span class="toc-number">8.</span> <span class="toc-text">The runtime.txt</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-file-named-runtime-txt"><span class="toc-number">8.1.</span> <span class="toc-text">Create a file named runtime.txt</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Creat-env-file-in-config-folder"><span class="toc-number">9.</span> <span class="toc-text">Creat .env file in config folder</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-this-lines-to-env-file"><span class="toc-number">9.1.</span> <span class="toc-text">Add this lines to .env file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-this-lines-to-settings-py"><span class="toc-number">9.2.</span> <span class="toc-text">Add this lines to settings.py</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#replace-database-configuration"><span class="toc-number">10.</span> <span class="toc-text">replace database configuration</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        How to Deploy Django Applications on Heroku using Python Decouple
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Shaaah.in</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-01-22T00:15:05.000Z" itemprop="datePublished">2018-01-22</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Django/">Django</a>, <a class="tag-link" href="/tags/Heroku/">Heroku</a>, <a class="tag-link" href="/tags/Python-Decouple/">Python Decouple</a>, <a class="tag-link" href="/tags/Tutorial/">Tutorial</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><p>You should have a local Django app setup using Postgres setup neatly in a virtualenv</p>
+<ul>
+<li><a href="/How to Setup Python development environment/">Python development environment</a></li>
+<li><a href="/How to Install Django Web Framework/">local Django application</a> using <a href="/How To Setup PostgreSQL on Ubuntu 16.04/">PostgreSQL</a></li>
+<li><a href="https://signup.heroku.com/signup/dc" target="_blank" rel="external">Heroku Account</a></li>
+<li>the <a href="https://cli.heroku.com/" target="_blank" rel="external">Heroku CLI</a> installed locally</li>
+</ul>
+<h2 id="Install-dj-database-url"><a href="#Install-dj-database-url" class="headerlink" title="Install dj-database-url"></a>Install dj-database-url</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">pip3 install dj-database-url</div></pre></td></tr></table></figure>
+<h2 id="Install-psycopg2"><a href="#Install-psycopg2" class="headerlink" title="Install psycopg2"></a>Install psycopg2</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">pip3 install psycopg2</div></pre></td></tr></table></figure>
+<h2 id="Install-Python-Decouple"><a href="#Install-Python-Decouple" class="headerlink" title="Install Python Decouple"></a>Install Python Decouple</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">pip3 install python-decouple</div></pre></td></tr></table></figure>
+<p><em>for static file serving its highly recomended using <a href="/How to Setup Digitalocean Spaces for Django using Python Decouple/">django Storage</a> package</em></p>
+<h2 id="Preparing-the-Application"><a href="#Preparing-the-Application" class="headerlink" title="Preparing the Application"></a>Preparing the Application</h2><ul>
+<li>Add a Procfile in the project root;</li>
+<li>update requirements.txt file with all the requirements in the project root;</li>
+<li>Add Gunicorn to requirements.txt;</li>
+<li>A runtime.txt to specify the correct Python version in the project root;</li>
+<li>A .env file to store database credential in the config directory;</li>
+</ul>
+<h2 id="The-Procfile"><a href="#The-Procfile" class="headerlink" title="The Procfile"></a>The Procfile</h2><h3 id="Create-a-file-named-Procfile-in-the-project"><a href="#Create-a-file-named-Procfile-in-the-project" class="headerlink" title="Create a file named Procfile in the project"></a>Create a file named Procfile in the project</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">touch Procfile</div></pre></td></tr></table></figure>
+<p>with the following content:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">web: gunicorn config.wsgi --log-file -</div></pre></td></tr></table></figure>
+<h2 id="Update-requirements"><a href="#Update-requirements" class="headerlink" title="Update requirements"></a>Update requirements</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">pip3 freeze &gt; requirements.txt</div></pre></td></tr></table></figure>
+<h3 id="add-Gunicorn-to-requirements-txt"><a href="#add-Gunicorn-to-requirements-txt" class="headerlink" title="add Gunicorn to requirements.txt"></a>add Gunicorn to requirements.txt</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">...</div><div class="line">gunicorn</div><div class="line">...</div></pre></td></tr></table></figure>
+<h2 id="The-runtime-txt"><a href="#The-runtime-txt" class="headerlink" title="The runtime.txt"></a>The runtime.txt</h2><h3 id="Create-a-file-named-runtime-txt"><a href="#Create-a-file-named-runtime-txt" class="headerlink" title="Create a file named runtime.txt"></a>Create a file named runtime.txt</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">touch runtime.txt</div></pre></td></tr></table></figure>
+<p>with the following content:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">python-3.6.4</div></pre></td></tr></table></figure>
+<h2 id="Creat-env-file-in-config-folder"><a href="#Creat-env-file-in-config-folder" class="headerlink" title="Creat .env file in config folder"></a>Creat .env file in config folder</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">touch .env</div></pre></td></tr></table></figure>
+<h3 id="Add-this-lines-to-env-file"><a href="#Add-this-lines-to-env-file" class="headerlink" title="Add this lines to .env file"></a>Add this lines to .env file</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">...</div><div class="line">PostgreSQL conf</div><div class="line">POSTGRES_PASSWORD=<span class="string">"mysecretpass"</span></div><div class="line">POSTGRES_USER=<span class="string">"my_super_user"</span></div><div class="line">POSTGRES_DB=<span class="string">"my_database_name"</span></div><div class="line">DATABASE_URL=postgresql://<span class="string">"my_super_user"</span>:<span class="string">"mysecretpass"</span>@127.0.0.1:5432/<span class="string">"my_database_name"</span></div><div class="line">...</div></pre></td></tr></table></figure>
+<h3 id="Add-this-lines-to-settings-py"><a href="#Add-this-lines-to-settings-py" class="headerlink" title="Add this lines to settings.py"></a>Add this lines to settings.py</h3><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">...</div><div class="line"><span class="keyword">from</span> decouple <span class="keyword">import</span>  config</div><div class="line"><span class="keyword">import</span> dj_database_url</div><div class="line">...</div></pre></td></tr></table></figure>
+<h2 id="replace-database-configuration"><a href="#replace-database-configuration" class="headerlink" title="replace database configuration"></a>replace database configuration</h2><figure class="highlight python"><table><tr><td class="code"><pre><div class="line">...</div><div class="line">DATABASES = &#123;</div><div class="line">    <span class="string">'default'</span>: dj_database_url.config(</div><div class="line">        conn_max_age=<span class="number">500</span>,</div><div class="line">        default=config(<span class="string">'DATABASE_URL'</span>)</div><div class="line">    )</div><div class="line">&#125;</div><div class="line">...</div></pre></td></tr></table></figure>
+<p>More info:</p>
+<ul>
+<li><a href="https://simpleisbetterthancomplex.com/tutorial/2016/08/09/how-to-deploy-django-applications-on-heroku.html" target="_blank" rel="external">How to Deploy Django Applications on Heroku</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/falcon9901">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prerequisites"><span class="toc-number">1.</span> <span class="toc-text">Prerequisites</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-dj-database-url"><span class="toc-number">2.</span> <span class="toc-text">Install dj-database-url</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-psycopg2"><span class="toc-number">3.</span> <span class="toc-text">Install psycopg2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Install-Python-Decouple"><span class="toc-number">4.</span> <span class="toc-text">Install Python Decouple</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Preparing-the-Application"><span class="toc-number">5.</span> <span class="toc-text">Preparing the Application</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Procfile"><span class="toc-number">6.</span> <span class="toc-text">The Procfile</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-file-named-Procfile-in-the-project"><span class="toc-number">6.1.</span> <span class="toc-text">Create a file named Procfile in the project</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Update-requirements"><span class="toc-number">7.</span> <span class="toc-text">Update requirements</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#add-Gunicorn-to-requirements-txt"><span class="toc-number">7.1.</span> <span class="toc-text">add Gunicorn to requirements.txt</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-runtime-txt"><span class="toc-number">8.</span> <span class="toc-text">The runtime.txt</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-file-named-runtime-txt"><span class="toc-number">8.1.</span> <span class="toc-text">Create a file named runtime.txt</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Creat-env-file-in-config-folder"><span class="toc-number">9.</span> <span class="toc-text">Creat .env file in config folder</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-this-lines-to-env-file"><span class="toc-number">9.1.</span> <span class="toc-text">Add this lines to .env file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-this-lines-to-settings-py"><span class="toc-number">9.2.</span> <span class="toc-text">Add this lines to settings.py</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#replace-database-configuration"><span class="toc-number">10.</span> <span class="toc-text">replace database configuration</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&text=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&title=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&is_video=false&description=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=How to Deploy Django Applications on Heroku using Python Decouple&body=Check out this article: http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&title=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&title=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&title=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&title=How to Deploy Django Applications on Heroku using Python Decouple"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://falcon9901.github.io/How to Deploy Django Applications on Heroku using Python Decouple/&name=How to Deploy Django Applications on Heroku using Python Decouple&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Shaahin Hosseini
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/falcon9901">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-96135580-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
