@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://falcon9901.github.io/How-to-Deploy-Django-Applications-on-Heroku-using-Python-Decouple/index.html">
 <meta property="og:site_name" content="Shaaah.in">
 <meta property="og:description" content="PrerequisitesYou should have a local Django app setup using Postgres setup neatly in a virtualenv  Python development environment local Django application using PostgreSQL Heroku Account the Heroku CL">
-<meta property="og:updated_time" content="2018-01-23T19:40:27.090Z">
+<meta property="og:updated_time" content="2018-01-23T20:13:26.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to Deploy Django Applications on Heroku using Python Decouple">
 <meta name="twitter:description" content="PrerequisitesYou should have a local Django app setup using Postgres setup neatly in a virtualenv  Python development environment local Django application using PostgreSQL Heroku Account the Heroku CL">
@@ -58,7 +58,7 @@
          
           <li><a href="/">Home</a></li>
          
-          <li><a href="/categories/Tutorial">Category</a></li>
+          <li><a href="/categories/Tutorial">Tutorials</a></li>
          
           <li><a href="/archives/">Writing</a></li>
          
@@ -70,10 +70,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/How-to-Setup-DigitalOcean-Spaces-for-Django-using-Python-Decouple/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="/How-To-Setup-PostgreSQL-on-Ubuntu-16.04/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" href="/How-to-Use-Python-Decouple-in-Django/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/Heroku-CLI-Cheatsheet/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -123,7 +123,7 @@
       </span>
       
     <div class="postdate">
-        <time datetime="2018-01-22T00:15:05.000Z" itemprop="datePublished">2018-01-22</time>
+        <time datetime="2018-01-19T00:15:05.000Z" itemprop="datePublished">2018-01-19</time>
     </div>
 
 
@@ -141,15 +141,15 @@
   <div class="content" itemprop="articleBody">
     <h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><p>You should have a local Django app setup using Postgres setup neatly in a virtualenv</p>
 <ul>
-<li><a href="/How to Setup Python development environment/">Python development environment</a></li>
-<li><a href="/How to Install Django Web Framework/">local Django application</a> using <a href="/How To Setup PostgreSQL on Ubuntu 16.04/">PostgreSQL</a></li>
+<li><a href="/How-to-Setup-Python-development-environment/">Python development environment</a></li>
+<li><a href="/How-to-Install-Django-Web-Framework/">local Django application</a> using <a href="/How-To-Setup-PostgreSQL-on-Ubuntu-16.04/">PostgreSQL</a></li>
 <li><a href="https://signup.heroku.com/signup/dc" target="_blank" rel="external">Heroku Account</a></li>
 <li>the <a href="https://cli.heroku.com/" target="_blank" rel="external">Heroku CLI</a> installed locally</li>
 </ul>
 <h2 id="Install-dj-database-url"><a href="#Install-dj-database-url" class="headerlink" title="Install dj-database-url"></a>Install dj-database-url</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">pip3 install dj-database-url</div></pre></td></tr></table></figure>
 <h2 id="Install-psycopg2"><a href="#Install-psycopg2" class="headerlink" title="Install psycopg2"></a>Install psycopg2</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">pip3 install psycopg2</div></pre></td></tr></table></figure>
 <h2 id="Install-Python-Decouple"><a href="#Install-Python-Decouple" class="headerlink" title="Install Python Decouple"></a>Install Python Decouple</h2><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">pip3 install python-decouple</div></pre></td></tr></table></figure>
-<p><em>for static file serving its highly recomended using <a href="/How to Setup Digitalocean Spaces for Django using Python Decouple/">django Storage</a> package</em></p>
+<p><em>for static file serving its highly recomended using <a href="/How-to-Setup-DigitalOcean-Spaces-for-Django-using-Python-Decouple/">django Storage</a> package</em></p>
 <h2 id="Preparing-the-Application"><a href="#Preparing-the-Application" class="headerlink" title="Preparing the Application"></a>Preparing the Application</h2><ul>
 <li>Add a Procfile in the project root;</li>
 <li>update requirements.txt file with all the requirements in the project root;</li>
@@ -189,7 +189,7 @@
          
           <li><a href="/">Home</a></li>
          
-          <li><a href="/categories/Tutorial">Category</a></li>
+          <li><a href="/categories/Tutorial">Tutorials</a></li>
          
           <li><a href="/archives/">Writing</a></li>
          
@@ -241,7 +241,7 @@
          
           <li><a href="/">Home</a></li>
          
-          <li><a href="/categories/Tutorial">Category</a></li>
+          <li><a href="/categories/Tutorial">Tutorials</a></li>
          
           <li><a href="/archives/">Writing</a></li>
          
