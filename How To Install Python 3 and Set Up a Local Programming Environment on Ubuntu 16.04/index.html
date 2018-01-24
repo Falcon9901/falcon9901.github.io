@@ -7,13 +7,13 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="Experienced Python/Django developers typically run Python apps within independent Python virtual environments.This enables multiple different Django environments on a single computer.The Django devel">
-<meta name="keywords" content="Django,Python">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How To Install Python 3 and Set Up a Local Programming Environment on Ubuntu 16.04">
 <meta property="og:url" content="http://falcon9901.github.io/How To Install Python 3 and Set Up a Local Programming Environment on Ubuntu 16.04/index.html">
 <meta property="og:site_name" content="Shaaah.in">
 <meta property="og:description" content="Experienced Python/Django developers typically run Python apps within independent Python virtual environments.This enables multiple different Django environments on a single computer.The Django devel">
-<meta property="og:updated_time" content="2018-01-23T23:12:17.793Z">
+<meta property="og:updated_time" content="2018-01-24T00:20:37.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How To Install Python 3 and Set Up a Local Programming Environment on Ubuntu 16.04">
 <meta name="twitter:description" content="Experienced Python/Django developers typically run Python apps within independent Python virtual environments.This enables multiple different Django environments on a single computer.The Django devel">
@@ -71,7 +71,7 @@
       <ul>
         
         
-        <li><a class="icon" href="/How to Install Django Web Framework/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/How To Install Python 3.6 on Ubuntu 16.04/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -128,7 +128,7 @@
       
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Django/">Django</a>, <a class="tag-link" href="/tags/Python/">Python</a>
+        <a class="tag-link" href="/tags/Python/">Python</a>
     </div>
 
 
@@ -145,7 +145,7 @@
 </blockquote>
 <h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><p>You will need a computer with Ubuntu 16.04 installed, as well as have administrative access to that machine and an internet connection.</p>
 <h2 id="Setting-Up-Python-3"><a href="#Setting-Up-Python-3" class="headerlink" title="Setting Up Python 3"></a>Setting Up Python 3</h2><h3 id="update-and-upgrade-the-system-with-apt-get"><a href="#update-and-upgrade-the-system-with-apt-get" class="headerlink" title="update and upgrade the system with apt-get"></a>update and upgrade the system with <code>apt-get</code></h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get -y upgrade</div></pre></td></tr></table></figure>
-<p>note : The <code>-y</code> flag will confirm that we are agreeing for all items to be download and installed.</p>
+<p>Note: The <code>-y</code> flag will confirm that we are agreeing for all items to be download and installed.</p>
 <h3 id="Check-Python-version"><a href="#Check-Python-version" class="headerlink" title="Check Python version"></a>Check Python version</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">$ python3 -V</div><div class="line">Python 3.5.2</div></pre></td></tr></table></figure>
 <h3 id="install-pip3"><a href="#install-pip3" class="headerlink" title="install pip3"></a>install pip3</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">sudo apt-get install -y python3-pip</div></pre></td></tr></table></figure>
 <h3 id="install-Python-packages-and-development-tools"><a href="#install-Python-packages-and-development-tools" class="headerlink" title="install Python packages and development tools"></a>install Python packages and development tools</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">sudo apt-get install build-essential libssl-dev libffi-dev python-dev</div></pre></td></tr></table></figure>
@@ -154,7 +154,7 @@
 <h3 id="Creating-the-sample-project-folder"><a href="#Creating-the-sample-project-folder" class="headerlink" title="Creating the sample project folder"></a>Creating the sample project folder</h3><p>make a directory for your python project and navigate to the directory</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">mkdir project</div><div class="line"><span class="built_in">cd</span> project</div></pre></td></tr></table></figure>
 <h3 id="Create-virtualenv-using-Python3"><a href="#Create-virtualenv-using-Python3" class="headerlink" title="Create virtualenv using Python3"></a>Create virtualenv using Python3</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">virtualenv -p python3 <span class="string">".venv"</span></div></pre></td></tr></table></figure>
-<p>Note : Using <code>.</code> before directory name in Linux makes it hidden.</p>
+<p>Note: Using <code>.</code> before directory name in Linux makes it hidden.</p>
 <h3 id="activate-virtualenv"><a href="#activate-virtualenv" class="headerlink" title="activate virtualenv"></a>activate virtualenv</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="built_in">source</span> <span class="string">".venv"</span>/bin/activate</div></pre></td></tr></table></figure>
 <h3 id="deactivate-virtualenv"><a href="#deactivate-virtualenv" class="headerlink" title="deactivate virtualenv"></a>deactivate virtualenv</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">deactivate</div></pre></td></tr></table></figure>
 
