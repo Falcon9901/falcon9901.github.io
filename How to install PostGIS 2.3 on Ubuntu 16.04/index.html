@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://falcon9901.github.io/How to install PostGIS 2.3 on Ubuntu 16.04/index.html">
 <meta property="og:site_name" content="Shaaah.in">
 <meta property="og:description" content="PostgreSQL installationadd the official PostgreSQL Apt Repository to your sources.listsudo add-apt-repository &quot;deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main&quot; Import the relevant signin">
-<meta property="og:updated_time" content="2018-02-03T23:03:07.051Z">
+<meta property="og:updated_time" content="2018-02-06T20:32:31.658Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to install PostGIS 2.3 on Ubuntu 16.04">
 <meta name="twitter:description" content="PostgreSQL installationadd the official PostgreSQL Apt Repository to your sources.listsudo add-apt-repository &quot;deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main&quot; Import the relevant signin">
@@ -72,6 +72,8 @@
         
         <li><a class="icon" href="/How to Setup DigitalOcean Spaces for Django using Python Decouple/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
+        
+        <li><a class="icon" href="/How To Install Git on Ubuntu/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -148,7 +150,7 @@
 <h3 id="give-our-database-user-access-rights-to-the-database"><a href="#give-our-database-user-access-rights-to-the-database" class="headerlink" title="give our database user access rights to the database"></a>give our database user access rights to the database</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">postgres=# GRANT ALL PRIVILEGES ON DATABASE "myproject" TO "myprojectuser";</div></pre></td></tr></table></figure>
 <h3 id="Exit-the-SQL-prompt-to-get-back-to-the-postgres-user’s-shell-session"><a href="#Exit-the-SQL-prompt-to-get-back-to-the-postgres-user’s-shell-session" class="headerlink" title="Exit the SQL prompt to get back to the postgres user’s shell session"></a>Exit the SQL prompt to get back to the postgres user’s shell session</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">postgres=# \q</div></pre></td></tr></table></figure>
 <h2 id="PostGIS-installation"><a href="#PostGIS-installation" class="headerlink" title="PostGIS installation"></a>PostGIS installation</h2><h3 id="Add-UbuntuGIS-unstable-repository"><a href="#Add-UbuntuGIS-unstable-repository" class="headerlink" title="Add UbuntuGIS-unstable repository"></a>Add UbuntuGIS-unstable repository</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable</div></pre></td></tr></table></figure>
-<h3 id="Install-PostGIS"><a href="#Install-PostGIS" class="headerlink" title="Install PostGIS"></a>Install PostGIS</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">sudo apt update</div><div class="line">sudo apt install postgis postgresql-9.6-postgis-2.3</div></pre></td></tr></table></figure>
+<h3 id="Install-PostGIS"><a href="#Install-PostGIS" class="headerlink" title="Install PostGIS"></a>Install PostGIS</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">sudo apt update</div><div class="line">sudo apt install postgis postgresql-9.6-postgis-2.3 postgresql-server-dev-9.6</div></pre></td></tr></table></figure>
 <h3 id="switch-to-the-postgres-user"><a href="#switch-to-the-postgres-user" class="headerlink" title="switch to the postgres user"></a>switch to the postgres user</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">sudo -u postgres psql</div></pre></td></tr></table></figure>
 <h3 id="Connect-to-the-myproject-database"><a href="#Connect-to-the-myproject-database" class="headerlink" title="Connect to the myproject database"></a>Connect to the myproject database</h3><figure class="highlight bash"><table><tr><td class="code"><pre><div class="line">psql <span class="_">-d</span> myproject</div></pre></td></tr></table></figure>
 <h3 id="Create-extensions-for-your-postgres-database"><a href="#Create-extensions-for-your-postgres-database" class="headerlink" title="Create extensions for your postgres database"></a>Create extensions for your postgres database</h3><figure class="highlight"><table><tr><td class="code"><pre><div class="line">myproject# CREATE EXTENSION postgis; CREATE EXTENSION postgis_topology;</div></pre></td></tr></table></figure>
